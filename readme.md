@@ -9,8 +9,8 @@ Find](https://www.gnu.org/software/findutils/).
 
 ## Hello World
 
-Let’s see all the R files we’ve modified in the last hour. But when
-don’t want to see any the were generated in .Rcheck folders.
+Let’s see all the R files we’ve modified in the last hour. But we don’t
+want to see any the were generated in .Rcheck folders.
 
 ``` r
 library(gnufind)
