@@ -1,6 +1,5 @@
 GNU Find for GNU R
 ================
-Kyle Andrews
 
 ## Purpose
 

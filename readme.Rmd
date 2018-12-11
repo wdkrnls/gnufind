@@ -1,6 +1,5 @@
 ---
 title: "GNU Find for GNU R"
-author: "Kyle Andrews"
 output: github_document
 ---
 
