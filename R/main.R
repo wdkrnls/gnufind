@@ -19,8 +19,12 @@ compound <- function(sep, prefix = TRUE, group = TRUE, max_length = Inf) {
   sep = paste0(" -", sep, " ")
   function(...) {
     find_args = list(...)
-    stopifnot(length(find_args) <= max_length)
+    n_args = length(find_args)
+    stopifnot(n_args <= max_length)
     arg_name = names(find_args)
+    if(is.null(arg_name)) {
+      return(trimws(paste0(sep, paste(find_args, collapse = sep))))
+    }
     map = flatmap(arg_name, function(nm) {
       paste(paste0("-", nm),
             shQuote(find_args[[nm]]),
