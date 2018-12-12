@@ -47,11 +47,11 @@ compound <- function(sep, prefix = TRUE, group = TRUE, max_length = Inf) {
 
 #' @rdname Compound
 #' @export
-or <- compound("or")
+or <- compound("or", prefix = FALSE)
 
 #' @rdname Compound
 #' @export
-and <- compound("and")
+and <- compound("and", prefix = FALSE)
 
 #' @rdname Compound
 #' @export

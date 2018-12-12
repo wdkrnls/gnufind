@@ -22,4 +22,20 @@ fs <- gnu_find(search_path = "~",
 
 `cmp` is a shorthand for making a `compound` statement. The three kinds
 of compound statements built-in are `or`, `and`, and `not`. New compound
-statements can be generated using `compound`.
+statements can be generated using `compound`. And you can use more than
+one compound statement. For example, suppose you want to exclude a few
+directories from your search path:
+
+``` r
+os <- gnu_find(search_path = "~", 
+               cmp = or(name = c("*.R", "*.py")), 
+               cmp = and(not(path = "*lib*"), 
+                         not(path = "*cache*")))
+```
+
+In addition to compound statements, there are also switches. We might
+use the `-empty` switch to find all empty directories.
+
+``` r
+ed <- gnu_find(search_path = "~", type = "d", sw = "empty")
+```
