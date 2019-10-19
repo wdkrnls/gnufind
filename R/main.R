@@ -91,11 +91,10 @@ gnu_find <- function(search_path = getwd(),
                      debug = FALSE) {
   find_args = c(...)
   argname = names(find_args)
-  special  = c("~", ".")
   switch = argname %in% c("sw", "switch")
   compound = argname %in% c("cmp", "compound")
-  pathstr = c(ifelse(search_path %in% special,
-                     search_path, shQuote(search_path)))
+  pathstr = normalizePath(search_path, mustWork = TRUE)
+  pathstr <- shQuote(pathstr)
   instr = ifelse(switch, paste0("-", find_args),
                  ifelse(compound, find_args,
                         paste(paste0("-", argname),

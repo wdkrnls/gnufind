@@ -1,11 +1,11 @@
 Package: gnufind
 Type: Package
 Title: GNU Find
-Version: 0.1.0
+Version: 0.1.1
 Author: Kyle Andrews
 Maintainer: Kyle Andrews <kyle.c.andrews@gmail.com>
 Description: A simple wrapper around GNU Find shell utility.
-License: GPL-3
+License: GPL-3+
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
