@@ -4,7 +4,7 @@
 \alias{gnu_find}
 \title{Wrapper around GNU Find CLI utility.}
 \usage{
-gnu_find(search_path = getwd(), ..., executable = "find",
+gnu_find(search_path = getwd(), ..., find_exec = "find",
   debug = FALSE)
 }
 \arguments{
@@ -12,7 +12,7 @@ gnu_find(search_path = getwd(), ..., executable = "find",
 
 \item{...}{Arguments to find.}
 
-\item{executable}{Character(1) path to GNU Find executable.}
+\item{find_exec}{Character(1) path to GNU Find executable.}
 
 \item{debug}{Logical(1) whether to print generated command.}
 }

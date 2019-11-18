@@ -76,7 +76,7 @@ not <- compound("not", max_length = 1)
 #' Please refer the GNU Find INFO pages for more details.
 #' @param search_path Character path names.
 #' @param ... Arguments to find.
-#' @param executable Character(1) path to GNU Find executable.
+#' @param find_exec Character(1) path to GNU Find executable.
 #' @param debug Logical(1) whether to print generated command.
 #' @return Character.
 #' @examples
@@ -87,7 +87,7 @@ not <- compound("not", max_length = 1)
 #' @export
 gnu_find <- function(search_path = getwd(),
                      ...,
-                     executable = "find",
+                     find_exec = "find",
                      debug = FALSE) {
   find_args = c(...)
   argname = names(find_args)
@@ -102,8 +102,8 @@ gnu_find <- function(search_path = getwd(),
   input = trimws(c(pathstr, instr))
   if(debug) {
     cat("Find command:\n",
-        paste(executable, paste(input, collapse = " ")),
+        paste(find_exec, paste(input, collapse = " ")),
         "\n")
   }
-  system2(command = executable, args = input, stdout = TRUE)
+  system2(command = find_exec, args = input, stdout = TRUE)
 }
